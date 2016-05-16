@@ -44,8 +44,14 @@ public class Player {
         setPlayerName(scanner.next());
 
         // Assign Player number
-//        System.out.println("Are you player 1 or 2? \n");
-//        setNumber(scanner.nextInt());
+        System.out.println("Are you player 1 or 2? \n");
+        int temp = scanner.nextInt();
+
+        // check for number specific compliance
+        if (temp != 1 && temp != 2) {
+            System.out.println("You must Choose 1 or 2!!");
+            setNumber(scanner.nextInt());
+        }
 
 //TODO Figure out how to not allow the second instance to use the same player number as the first...
 
