@@ -19,7 +19,10 @@ public class Actions {
     int pCount = 0;
     int moves = 0;
 
+    System.out.println("Player one...");
     playerOne.initiatePlayer();
+
+    System.out.println("Player two...");
     playerTwo.initiatePlayer();
 
     Board board = new Board();

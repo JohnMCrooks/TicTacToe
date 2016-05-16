@@ -39,29 +39,17 @@ public class Player {
     public void initiatePlayer(){
         Scanner scanner = new Scanner(System.in);
 
+        // Get users name
         System.out.println("What is your name? \n");
         setPlayerName(scanner.next());
 
-        System.out.println("Are you player 1 or 2? \n");
-        setNumber(scanner.nextInt());
-//TODO Figure out how to not allow the second instance to use the same player number as the first...
-        if (number == 1) {
-            if (test == 1){
-                System.out.println("player one has already been taken... you'll be player Two");
-                setNumber(2);
-            } else { test = 1;
-                System.out.println("Welcome " + getPlayerName() + ", you will be going first.\n");}
-        }
-        else if (number == 2){
-            if (test == 2){
-                System.out.println("player two has already been taken... you'll be player one");
-                setNumber(1);
-            } else { setTest(2);
-                System.out.println("Welcome " + getPlayerName() + ", you will be going second.\n");}
+        // Assign Player number
+//        System.out.println("Are you player 1 or 2? \n");
+//        setNumber(scanner.nextInt());
 
-        } else {
-            System.out.println("invalid choice");
-        }
+//TODO Figure out how to not allow the second instance to use the same player number as the first...
+
+
     }
 
 }
