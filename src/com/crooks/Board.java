@@ -13,12 +13,14 @@ public class Board {
     public String[] array;
     String[] playingBoard = new String[]{"1","2","3","4","5","6","7","8","9"};
 
+    // Shows the current state of the playing board in ASCII format
    public void showBoard() {
         System.out.println(" "+  playingBoard[0] +" "+ playingBoard[1] +" "+ playingBoard[2]);
         System.out.println(" "+  playingBoard[3] +" "+   playingBoard[4] +" "+   playingBoard[5]);
         System.out.println(" "+  playingBoard[6] +" "+   playingBoard[7] + " "+  playingBoard[8]);
     }
 
+    // takes players input, checks that the selected position hasn't been picked already and alters the position or tells them to choose again
     public void editBoard(int playerNumber, int value) {
         Scanner scanner = new Scanner(System.in);
 
@@ -34,6 +36,7 @@ public class Board {
         }
     }
 
+    //Checks the array for all possible win combinations and responds as necessary
     public boolean checkForWin() {
         boolean winStatus = false;
         if( playingBoard[0].matches(playingBoard[1]) && playingBoard[0].matches(playingBoard[2]) ) {
@@ -74,6 +77,8 @@ public class Board {
         }
         return winStatus;
     }
+
+    // resets the board after a game
     public void clear(){;
         playingBoard = new String[]{"1","2","3","4","5","6","7","8","9"};
 
